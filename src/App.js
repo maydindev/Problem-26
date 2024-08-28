@@ -28,8 +28,8 @@ export default function Stopwatch() {
     <div className='p-12 mx-auto space-y-4 max-w-[300px]'>
       <div className='font-bold text-center text-3xl'>Zamanlayıcı: {seconds}s</div>
       <div className='flex justify-between'>
-        <button className='text-amber-500 font-bold' onClick={handleClickStop}>Durdur</button>
-        <button className='text-green-500 font-bold' onClick={handleClickStart}>Başlat</button>
+        <button className={`font-bold ${!isRunning ?"text-red-100" : "text-red-700"}`} onClick={handleClickStop}>Durdur</button>
+        <button className={`font-bold ${isRunning ?"text-green-100" : "text-green-700"}`} onClick={handleClickStart}>Başlat</button>
       </div>
     </div>
   )
